@@ -38,6 +38,9 @@ const Header = () => {
     label: "Missão",
     id: "mission"
   }, {
+    label: "Parceiros",
+    id: "partners"
+  }, {
     label: "Contato",
     id: "contact"
   }];
