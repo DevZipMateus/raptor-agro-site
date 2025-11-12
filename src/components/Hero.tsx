@@ -22,7 +22,7 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/videos/P150 - Product Introduction Video - Unsubtitled version.mp4" type="video/mp4" />
+          <source src="/videos/drone-intro.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-overlay-dark" />
       </div>
