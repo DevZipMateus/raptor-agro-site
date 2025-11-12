@@ -1,7 +1,8 @@
 import { ShoppingCart, Wrench, GraduationCap, Map } from "lucide-react";
-import maintenanceImg from "@/assets/service-maintenance.jpg";
-import trainingImg from "@/assets/service-training.jpg";
-import mappingImg from "@/assets/service-mapping.jpg";
+import commerceImg from "@/assets/p100-pro-1.jpg";
+import maintenanceImg from "@/assets/p100-1.jpg";
+import mappingImg from "@/assets/r150-3.jpg";
+import trainingImg from "@/assets/v50-6.jpg";
 
 const Services = () => {
   const services = [
@@ -9,7 +10,7 @@ const Services = () => {
       icon: ShoppingCart,
       title: "Comercialização de drones XAG",
       description: "Revenda autorizada de drones agrícolas XAG, referência mundial em tecnologia de pulverização e mapeamento para o agronegócio.",
-      image: maintenanceImg,
+      image: commerceImg,
     },
     {
       icon: Wrench,
