@@ -29,6 +29,15 @@ import v50_7 from "@/assets/v50-7.jpg";
 import v50_8 from "@/assets/v50-8.jpg";
 import v50_9 from "@/assets/v50-9.jpg";
 import v50_10 from "@/assets/v50-10.jpg";
+import p100_1 from "@/assets/p100-1.jpg";
+import p100_2 from "@/assets/p100-2.jpg";
+import p100_3 from "@/assets/p100-3.jpg";
+import p100_4 from "@/assets/p100-4.jpg";
+import p100_5 from "@/assets/p100-5.jpg";
+import p100_6 from "@/assets/p100-6.jpg";
+import p100_7 from "@/assets/p100-7.jpg";
+import p100_8 from "@/assets/p100-8.jpg";
+import p100_9 from "@/assets/p100-9.jpg";
 
 const DroneModels = () => {
   const p100ProImages = [
@@ -63,6 +72,18 @@ const DroneModels = () => {
     { src: v50_8, alt: "V50 - Performance RevoSpray" },
     { src: v50_9, alt: "V50 - Eficiência RevoSpray" },
     { src: v50_10, alt: "V50 - Drone agrícola avançado" },
+  ];
+
+  const p100Images = [
+    { src: p100_1, alt: "P100 PRO - Sistema RevoCast" },
+    { src: p100_2, alt: "P100 PRO - Tecnologia RevoCast" },
+    { src: p100_3, alt: "P100 PRO - Sistema RevoSpray" },
+    { src: p100_4, alt: "P100 PRO - RevoSpray em operação" },
+    { src: p100_5, alt: "P100 PRO - Aplicação RevoSpray" },
+    { src: p100_6, alt: "P100 PRO - RevoSpray avançado" },
+    { src: p100_7, alt: "P100 PRO - Performance RevoSpray" },
+    { src: p100_8, alt: "P100 PRO - Eficiência RevoSpray" },
+    { src: p100_9, alt: "P100 PRO - Drone agrícola profissional" },
   ];
 
   return (
@@ -169,6 +190,37 @@ const DroneModels = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {v50Images.map((image, index) => (
+                      <div
+                        key={index}
+                        className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group"
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="p100" className="bg-background rounded-lg mb-4 border-border">
+              <AccordionTrigger className="px-6 text-xl font-semibold text-foreground hover:text-primary hover:no-underline">
+                P100 PRO
+              </AccordionTrigger>
+              <AccordionContent className="px-6">
+                <div className="space-y-6">
+                  <div className="prose max-w-none">
+                    <p className="text-muted-foreground">
+                      O P100 PRO combina os sistemas RevoCast e RevoSpray para oferecer máxima versatilidade 
+                      e eficiência em operações agrícolas, com tecnologia de ponta para aplicações de precisão.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {p100Images.map((image, index) => (
                       <div
                         key={index}
                         className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group"
