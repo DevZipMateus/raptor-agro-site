@@ -19,6 +19,16 @@ import r150_3 from "@/assets/r150-3.jpg";
 import r150_4 from "@/assets/r150-4.jpg";
 import r150_5 from "@/assets/r150-5.jpg";
 import r150_6 from "@/assets/r150-6.jpg";
+import v50_1 from "@/assets/v50-1.jpg";
+import v50_2 from "@/assets/v50-2.jpg";
+import v50_3 from "@/assets/v50-3.jpg";
+import v50_4 from "@/assets/v50-4.jpg";
+import v50_5 from "@/assets/v50-5.jpg";
+import v50_6 from "@/assets/v50-6.jpg";
+import v50_7 from "@/assets/v50-7.jpg";
+import v50_8 from "@/assets/v50-8.jpg";
+import v50_9 from "@/assets/v50-9.jpg";
+import v50_10 from "@/assets/v50-10.jpg";
 
 const DroneModels = () => {
   const p100ProImages = [
@@ -40,6 +50,19 @@ const DroneModels = () => {
     { src: r150_4, alt: "R150 - Tecnologia de precisão" },
     { src: r150_5, alt: "R150 - Equipamento profissional" },
     { src: r150_6, alt: "R150 - Drone agrícola em ação" },
+  ];
+
+  const v50Images = [
+    { src: v50_1, alt: "V50 - Detalhe do produto" },
+    { src: v50_2, alt: "V50 - Sistema RevoCast" },
+    { src: v50_3, alt: "V50 - Tecnologia RevoCast" },
+    { src: v50_4, alt: "V50 - RevoCast em operação" },
+    { src: v50_5, alt: "V50 - Sistema RevoSpray" },
+    { src: v50_6, alt: "V50 - RevoSpray em campo" },
+    { src: v50_7, alt: "V50 - Aplicação RevoSpray" },
+    { src: v50_8, alt: "V50 - Performance RevoSpray" },
+    { src: v50_9, alt: "V50 - Eficiência RevoSpray" },
+    { src: v50_10, alt: "V50 - Drone agrícola avançado" },
   ];
 
   return (
@@ -126,6 +149,37 @@ const DroneModels = () => {
                       <source src="/videos/r150.mp4" type="video/mp4" />
                       Seu navegador não suporta a reprodução de vídeos.
                     </video>
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="v50" className="bg-background rounded-lg mb-4 border-border">
+              <AccordionTrigger className="px-6 text-xl font-semibold text-foreground hover:text-primary hover:no-underline">
+                V50
+              </AccordionTrigger>
+              <AccordionContent className="px-6">
+                <div className="space-y-6">
+                  <div className="prose max-w-none">
+                    <p className="text-muted-foreground">
+                      O V50 é um drone agrícola versátil equipado com os sistemas RevoCast e RevoSpray, 
+                      oferecendo soluções completas para pulverização e aplicação de precisão em diversas culturas.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {v50Images.map((image, index) => (
+                      <div
+                        key={index}
+                        className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group"
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
                   </div>
                 </div>
               </AccordionContent>
