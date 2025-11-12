@@ -38,6 +38,16 @@ import p100_6 from "@/assets/p100-6.jpg";
 import p100_7 from "@/assets/p100-7.jpg";
 import p100_8 from "@/assets/p100-8.jpg";
 import p100_9 from "@/assets/p100-9.jpg";
+import p150_1 from "@/assets/p150-1.jpg";
+import p150_2 from "@/assets/p150-2.jpg";
+import p150_3 from "@/assets/p150-3.jpg";
+import p150_4 from "@/assets/p150-4.jpg";
+import p150_5 from "@/assets/p150-5.jpg";
+import p150_6 from "@/assets/p150-6.jpg";
+import p150_7 from "@/assets/p150-7.jpg";
+import p150_8 from "@/assets/p150-8.jpg";
+import p150_9 from "@/assets/p150-9.jpg";
+import p150_10 from "@/assets/p150-10.jpg";
 
 const DroneModels = () => {
   const p100ProImages = [
@@ -84,6 +94,19 @@ const DroneModels = () => {
     { src: p100_7, alt: "P100 PRO - Performance RevoSpray" },
     { src: p100_8, alt: "P100 PRO - Eficiência RevoSpray" },
     { src: p100_9, alt: "P100 PRO - Drone agrícola profissional" },
+  ];
+
+  const p150Images = [
+    { src: p150_1, alt: "P150 - Sistema RevoCast em operação" },
+    { src: p150_2, alt: "P150 - RevoSpray em campo" },
+    { src: p150_3, alt: "P150 - Tecnologia RevoSpray" },
+    { src: p150_4, alt: "P150 - Aplicação de precisão" },
+    { src: p150_5, alt: "P150 - RevoSpray profissional" },
+    { src: p150_6, alt: "P150 - Performance avançada" },
+    { src: p150_7, alt: "P150 - Eficiência operacional" },
+    { src: p150_8, alt: "P150 - Drone em operação" },
+    { src: p150_9, alt: "P150 - Pulverização agrícola" },
+    { src: p150_10, alt: "P150 - Drone agrícola avançado" },
   ];
 
   return (
@@ -221,6 +244,37 @@ const DroneModels = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {p100Images.map((image, index) => (
+                      <div
+                        key={index}
+                        className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group"
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="p150" className="bg-background rounded-lg mb-4 border-border">
+              <AccordionTrigger className="px-6 text-xl font-semibold text-foreground hover:text-primary hover:no-underline">
+                P150
+              </AccordionTrigger>
+              <AccordionContent className="px-6">
+                <div className="space-y-6">
+                  <div className="prose max-w-none">
+                    <p className="text-muted-foreground">
+                      O P150 é um drone agrícola de alta capacidade, equipado com sistemas RevoCast e RevoSpray 
+                      avançados, ideal para operações de grande escala com máxima eficiência e precisão.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {p150Images.map((image, index) => (
                       <div
                         key={index}
                         className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group"
