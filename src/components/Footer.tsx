@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -17,6 +18,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Sobre */}
           <div>
+            <img src={logo} alt="Raptor Drones Agrícolas" className="h-12 mb-4" />
             <h3 className="text-lg font-semibold mb-4 text-foreground">Raptor Drones Agrícolas</h3>
             <p className="text-muted-foreground mb-4">
               Soluções tecnológicas completas para a agricultura de precisão. Voando alto junto com o agro!
