@@ -38,6 +38,9 @@ const Header = () => {
     label: "Missão",
     id: "mission"
   }, {
+    label: "P100 Pro",
+    id: "p100-pro"
+  }, {
     label: "Parceiros",
     id: "partners"
   }, {
