@@ -7,6 +7,14 @@ const VideoSection = () => {
             controls
             className="w-full rounded-lg shadow-lg"
             preload="metadata"
+            onLoadStart={() => console.log("VideoSection: Iniciando carregamento...")}
+            onCanPlay={() => console.log("VideoSection: Vídeo pronto para reproduzir")}
+            onError={(e) => {
+              console.error("VideoSection: Erro ao carregar vídeo:", e);
+              const video = e.currentTarget as HTMLVideoElement;
+              console.error("VideoSection error code:", video.error?.code);
+              console.error("VideoSection error message:", video.error?.message);
+            }}
           >
             <source src="/drone.mp4" type="video/mp4" />
             Seu navegador não suporta vídeos HTML5.
