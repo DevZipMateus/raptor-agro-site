@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
-import droneVideo from "@/assets/drone-intro.mp4";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -15,18 +14,24 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-black">
         <video
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           className="w-full h-full object-cover"
-          onError={(e) => console.error("Erro ao carregar o vídeo:", e)}
-          onLoadedData={() => console.log("Vídeo carregado com sucesso")}
+          onLoadStart={() => console.log("Iniciando carregamento do vídeo...")}
+          onCanPlay={() => console.log("Vídeo pronto para reproduzir")}
+          onError={(e) => {
+            console.error("Erro ao carregar vídeo:", e);
+            const video = e.currentTarget as HTMLVideoElement;
+            console.error("Video error code:", video.error?.code);
+            console.error("Video error message:", video.error?.message);
+          }}
         >
-          <source src={droneVideo} type="video/mp4" />
-          Seu navegador não suporta vídeos HTML5.
+          <source src="/videos/drone-intro.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/50" />
       </div>
