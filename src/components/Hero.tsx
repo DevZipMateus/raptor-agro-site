@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
-import heroImage from "@/assets/hero-drone.jpg";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -15,14 +14,16 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20">
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/videos/P150 - Product Introduction Video - Unsubtitled version.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-overlay-dark" />
       </div>
       
