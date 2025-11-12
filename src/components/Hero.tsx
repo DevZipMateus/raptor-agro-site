@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
-import { useRef, useEffect, useState } from "react";
-import heroImage from "@/assets/hero-drone.jpg";
+import { useRef, useEffect } from "react";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoError, setVideoError] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -50,40 +48,31 @@ const Hero = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 z-0 bg-black">
-        {!videoError ? (
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            className="w-full h-full object-cover"
-            onLoadStart={() => console.log("Iniciando carregamento do vídeo...")}
-            onCanPlay={() => console.log("Vídeo pronto para reproduzir")}
-            onEnded={(e) => {
-              console.log("Evento onEnded disparado");
-              const video = e.currentTarget as HTMLVideoElement;
-              video.currentTime = 0;
-              video.play().catch(err => console.error("Erro ao reproduzir no onEnded:", err));
-            }}
-            onError={(e) => {
-              console.error("Erro ao carregar vídeo:", e);
-              const video = e.currentTarget as HTMLVideoElement;
-              console.error("Video error code:", video.error?.code);
-              console.error("Video error message:", video.error?.message);
-              setVideoError(true);
-            }}
-          >
-            <source src="/videos/hero.mp4" type="video/mp4" />
-          </video>
-        ) : (
-          <img 
-            src={heroImage} 
-            alt="Drone agrícola em ação" 
-            className="w-full h-full object-cover"
-          />
-        )}
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="w-full h-full object-cover"
+          onLoadStart={() => console.log("Iniciando carregamento do vídeo...")}
+          onCanPlay={() => console.log("Vídeo pronto para reproduzir")}
+          onEnded={(e) => {
+            console.log("Evento onEnded disparado");
+            const video = e.currentTarget as HTMLVideoElement;
+            video.currentTime = 0;
+            video.play().catch(err => console.error("Erro ao reproduzir no onEnded:", err));
+          }}
+          onError={(e) => {
+            console.error("Erro ao carregar vídeo:", e);
+            const video = e.currentTarget as HTMLVideoElement;
+            console.error("Video error code:", video.error?.code);
+            console.error("Video error message:", video.error?.message);
+          }}
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/50" />
       </div>
       
