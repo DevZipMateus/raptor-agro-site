@@ -1,7 +1,40 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
+import { useRef, useEffect } from "react";
 
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleTimeUpdate = () => {
+      // Reiniciar quando chegar a 99% do vídeo
+      if (video.currentTime >= video.duration * 0.99) {
+        console.log("Reiniciando vídeo via timeUpdate");
+        video.currentTime = 0;
+        video.play().catch(err => console.error("Erro ao reproduzir:", err));
+      }
+    };
+
+    video.addEventListener('timeupdate', handleTimeUpdate);
+
+    // Fallback: verificar periodicamente
+    const interval = setInterval(() => {
+      if (video.paused && video.currentTime > 0) {
+        console.log("Vídeo pausado detectado, reiniciando...");
+        video.currentTime = 0;
+        video.play().catch(err => console.error("Erro ao reproduzir:", err));
+      }
+    }, 1000);
+
+    return () => {
+      video.removeEventListener('timeupdate', handleTimeUpdate);
+      clearInterval(interval);
+    };
+  }, []);
+
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -16,6 +49,7 @@ const Hero = () => {
     <section id="hero" className="relative min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 z-0 bg-black">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
@@ -25,9 +59,10 @@ const Hero = () => {
           onLoadStart={() => console.log("Iniciando carregamento do vídeo...")}
           onCanPlay={() => console.log("Vídeo pronto para reproduzir")}
           onEnded={(e) => {
+            console.log("Evento onEnded disparado");
             const video = e.currentTarget as HTMLVideoElement;
             video.currentTime = 0;
-            video.play();
+            video.play().catch(err => console.error("Erro ao reproduzir no onEnded:", err));
           }}
           onError={(e) => {
             console.error("Erro ao carregar vídeo:", e);
