@@ -16,7 +16,7 @@ const VideoSection = () => {
               console.error("VideoSection error message:", video.error?.message);
             }}
           >
-            <source src="/drone.mp4" type="video/mp4" />
+            <source src="/curto.mp4" type="video/mp4" />
             Seu navegador não suporta vídeos HTML5.
           </video>
         </div>
