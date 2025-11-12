@@ -24,6 +24,11 @@ const Hero = () => {
           className="w-full h-full object-cover"
           onLoadStart={() => console.log("Iniciando carregamento do vídeo...")}
           onCanPlay={() => console.log("Vídeo pronto para reproduzir")}
+          onEnded={(e) => {
+            const video = e.currentTarget as HTMLVideoElement;
+            video.currentTime = 0;
+            video.play();
+          }}
           onError={(e) => {
             console.error("Erro ao carregar vídeo:", e);
             const video = e.currentTarget as HTMLVideoElement;
