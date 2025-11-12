@@ -13,6 +13,12 @@ import p100Pro6 from "@/assets/p100-pro-6.jpg";
 import p100Pro7 from "@/assets/p100-pro-7.jpg";
 import p100Pro8 from "@/assets/p100-pro-8.jpg";
 import p100Pro9 from "@/assets/p100-pro-9.jpg";
+import r150_1 from "@/assets/r150-1.jpg";
+import r150_2 from "@/assets/r150-2.jpg";
+import r150_3 from "@/assets/r150-3.jpg";
+import r150_4 from "@/assets/r150-4.jpg";
+import r150_5 from "@/assets/r150-5.jpg";
+import r150_6 from "@/assets/r150-6.jpg";
 
 const DroneModels = () => {
   const p100ProImages = [
@@ -25,6 +31,15 @@ const DroneModels = () => {
     { src: p100Pro7, alt: "P100 PRO + - Design inovador" },
     { src: p100Pro8, alt: "P100 PRO + - Especificações" },
     { src: p100Pro9, alt: "P100 PRO + - Performance profissional" },
+  ];
+
+  const r150Images = [
+    { src: r150_1, alt: "R150 - Pulverização em pomar de pitaya" },
+    { src: r150_2, alt: "R150 - Sistema de aplicação agrícola" },
+    { src: r150_3, alt: "R150 - Operação em campo" },
+    { src: r150_4, alt: "R150 - Tecnologia de precisão" },
+    { src: r150_5, alt: "R150 - Equipamento profissional" },
+    { src: r150_6, alt: "R150 - Drone agrícola em ação" },
   ];
 
   return (
@@ -67,6 +82,50 @@ const DroneModels = () => {
                         />
                       </div>
                     ))}
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="r150" className="bg-background rounded-lg mb-4 border-border">
+              <AccordionTrigger className="px-6 text-xl font-semibold text-foreground hover:text-primary hover:no-underline">
+                R150
+              </AccordionTrigger>
+              <AccordionContent className="px-6">
+                <div className="space-y-6">
+                  <div className="prose max-w-none">
+                    <p className="text-muted-foreground">
+                      O R150 é um drone agrícola robusto e eficiente, ideal para pulverização de precisão 
+                      em diversos tipos de culturas, incluindo pomares e áreas de difícil acesso.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {r150Images.map((image, index) => (
+                      <div
+                        key={index}
+                        className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group"
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-6">
+                    <video
+                      className="w-full rounded-lg shadow-lg"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    >
+                      <source src="/videos/r150.mp4" type="video/mp4" />
+                      Seu navegador não suporta a reprodução de vídeos.
+                    </video>
                   </div>
                 </div>
               </AccordionContent>
