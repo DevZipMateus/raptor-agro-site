@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
+import droneVideo from "@/assets/drone-intro.mp4";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -24,7 +25,7 @@ const Hero = () => {
           onError={(e) => console.error("Erro ao carregar o vídeo:", e)}
           onLoadedData={() => console.log("Vídeo carregado com sucesso")}
         >
-          <source src="/videos/drone-intro.mp4" type="video/mp4" />
+          <source src={droneVideo} type="video/mp4" />
           Seu navegador não suporta vídeos HTML5.
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/50" />
