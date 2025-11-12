@@ -9,20 +9,20 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Entre em contato
           </h2>
-          <div className="h-1 w-24 bg-primary mx-auto mb-6" />
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="h-1 w-20 sm:w-24 bg-primary mx-auto mb-4 sm:mb-6" />
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Estamos prontos para atender você e levar tecnologia de ponta para sua propriedade
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
             {/* Contact Info */}
             <div className="space-y-6">
               <div className="flex items-start gap-4 p-4 bg-muted rounded-lg">
@@ -107,11 +107,11 @@ const Contact = () => {
             </div>
 
             {/* CTA Card */}
-            <div className="bg-hero-gradient rounded-xl p-8 text-white flex flex-col justify-center">
-              <h3 className="text-3xl font-bold mb-4">
+            <div className="bg-hero-gradient rounded-xl p-6 sm:p-8 text-white flex flex-col justify-center">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
                 Pronto para decolar com o agro?
               </h3>
-              <p className="text-white/90 mb-6 text-lg">
+              <p className="text-white/90 mb-5 sm:mb-6 text-base sm:text-lg">
                 Entre em contato conosco e descubra como a tecnologia de drones pode transformar sua produção agrícola.
               </p>
               <Button

@@ -51,28 +51,28 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <button onClick={() => scrollToSection("hero")} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Raptor Drones Agrícolas" className="h-28 w-auto" />
+            <img src={logo} alt="Raptor Drones Agrícolas" className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto" />
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-foreground hover:text-primary transition-colors font-medium">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+            {navItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-sm xl:text-base text-foreground hover:text-primary transition-colors font-medium">
                 {item.label}
               </button>)}
-            <Button onClick={() => scrollToSection("contact")} className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg-primary">
+            <Button onClick={() => scrollToSection("contact")} className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg-primary text-sm xl:text-base">
               Fale conosco
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button className="lg:hidden text-foreground p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && <nav className="md:hidden py-4 border-t border-border">
-            {navItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="block w-full text-left py-3 text-foreground hover:text-primary transition-colors font-medium">
+        {isMobileMenuOpen && <nav className="lg:hidden py-4 border-t border-border animate-fade-in">
+            {navItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="block w-full text-left py-3 px-2 text-foreground hover:text-primary hover:bg-muted/50 transition-all font-medium rounded">
                 {item.label}
               </button>)}
             <Button onClick={() => scrollToSection("contact")} className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground">

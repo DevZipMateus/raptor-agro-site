@@ -33,25 +33,25 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+    <section id="services" className="py-12 sm:py-16 md:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Nossos serviços
           </h2>
-          <div className="h-1 w-24 bg-primary mx-auto mb-6" />
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="h-1 w-20 sm:w-24 bg-primary mx-auto mb-4 sm:mb-6" />
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Soluções completas em tecnologia para o campo, com atendimento personalizado e suporte técnico especializado
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <div 
               key={index}
               className="group bg-card rounded-xl overflow-hidden shadow-md hover:shadow-lg-primary transition-all duration-300 border border-border"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
                 <img 
                   src={service.image} 
                   alt={service.title}
@@ -63,11 +63,11 @@ const Services = () => {
                 </div>
               </div>
               
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-card-foreground">
+              <div className="p-5 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-card-foreground">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
               </div>
