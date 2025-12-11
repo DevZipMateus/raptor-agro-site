@@ -35,7 +35,7 @@ const Partners = () => {
             <img
               src={buffaloLogo}
               alt="Buffalo Motores & Acoplados"
-              className="max-h-16 sm:max-h-20 w-auto object-contain"
+              className="max-h-[84px] sm:max-h-[104px] w-auto object-contain"
             />
           </div>
           <div className="bg-background rounded-lg p-4 sm:p-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow min-h-[120px] sm:min-h-[150px]">
