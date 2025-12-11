@@ -1,4 +1,5 @@
-import { ShoppingCart, Wrench, GraduationCap, Map } from "lucide-react";
+import { ShoppingCart, Wrench, GraduationCap, Map, Instagram } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import commerceImg from "@/assets/p100-pro-1.jpg";
 import maintenanceImg from "@/assets/p100-1.jpg";
 import mappingImg from "@/assets/r150-3.jpg";
@@ -73,6 +74,29 @@ const Services = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Instagram CTA */}
+        <div className="mt-12 sm:mt-16 text-center">
+          <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-xl p-6 sm:p-8 max-w-2xl mx-auto border border-primary/20">
+            <Instagram className="w-10 h-10 sm:w-12 sm:h-12 text-primary mx-auto mb-4" />
+            <h3 className="text-xl sm:text-2xl font-bold mb-2 text-foreground">
+              Acompanhe nosso trabalho
+            </h3>
+            <p className="text-muted-foreground mb-4 sm:mb-6">
+              Confira conteúdos exclusivos, dicas e novidades sobre drones agrícolas no nosso Instagram
+            </p>
+            <Button asChild size="lg" className="gap-2">
+              <a
+                href="https://instagram.com/raptor_dronesbrasil"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="w-5 h-5" />
+                Seguir @raptor_dronesbrasil
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
