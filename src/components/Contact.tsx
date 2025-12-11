@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -67,10 +67,11 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2 text-lg">Endereço</h3>
+                  <h3 className="font-semibold mb-2 text-lg">Endereço da loja</h3>
                   <p className="text-muted-foreground">
-                    Rua Eng. Rogerio Tochetto, 33<br />
-                    Santa Maria, RS
+                    Rua Engenheiro Rogerio Tochetto, 33<br />
+                    Nossa Senhora de Lourdes<br />
+                    Santa Maria/RS
                   </p>
                 </div>
               </div>
@@ -94,14 +95,26 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2 text-lg">Redes sociais</h3>
-                  <a
-                    href="https://instagram.com/raptor_dronesbrasil"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    @raptor_dronesbrasil
-                  </a>
+                  <div className="space-y-2">
+                    <a
+                      href="https://instagram.com/raptor_dronesbrasil"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Instagram className="w-4 h-4" />
+                      @raptor_dronesbrasil
+                    </a>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61584461529092"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Facebook className="w-4 h-4" />
+                      Raptor Drones Agrícolas
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
