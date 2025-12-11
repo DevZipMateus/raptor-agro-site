@@ -1,5 +1,7 @@
 import xagLogo from "@/assets/partner-xag.png";
 import timberLogo from "@/assets/partner-timber.png";
+import buffaloLogo from "@/assets/partner-buffalo.png";
+import jrLogo from "@/assets/partner-jr.png";
 
 const Partners = () => {
   return (
@@ -14,19 +16,33 @@ const Partners = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
-          <div className="bg-background rounded-lg p-6 sm:p-8 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow min-h-[150px] sm:min-h-[180px]">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
+          <div className="bg-background rounded-lg p-4 sm:p-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow min-h-[120px] sm:min-h-[150px]">
             <img
               src={xagLogo}
-              alt="XAG with Timber"
-              className="max-h-20 sm:max-h-24 w-auto object-contain"
+              alt="XAG"
+              className="max-h-16 sm:max-h-20 w-auto object-contain"
             />
           </div>
-          <div className="bg-background rounded-lg p-6 sm:p-8 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow min-h-[150px] sm:min-h-[180px]">
+          <div className="bg-background rounded-lg p-4 sm:p-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow min-h-[120px] sm:min-h-[150px]">
             <img
               src={timberLogo}
               alt="Timber Consórcio"
-              className="max-h-20 sm:max-h-24 w-auto object-contain"
+              className="max-h-16 sm:max-h-20 w-auto object-contain"
+            />
+          </div>
+          <div className="bg-background rounded-lg p-4 sm:p-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow min-h-[120px] sm:min-h-[150px]">
+            <img
+              src={buffaloLogo}
+              alt="Buffalo Motores & Acoplados"
+              className="max-h-16 sm:max-h-20 w-auto object-contain"
+            />
+          </div>
+          <div className="bg-background rounded-lg p-4 sm:p-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow min-h-[120px] sm:min-h-[150px]">
+            <img
+              src={jrLogo}
+              alt="JR Soluções"
+              className="max-h-16 sm:max-h-20 w-auto object-contain"
             />
           </div>
         </div>
