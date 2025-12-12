@@ -220,22 +220,23 @@ const DroneModels = () => {
                   </div>
 
                   <div className="flex flex-wrap gap-3 mt-4">
-                    <a 
-                      href="/datasheets/p100-pro-revospray-1.jpg" 
-                      download="P100_PRO_RevoSpray_Pagina1.jpg"
+                    <button 
+                      onClick={() => {
+                        const files = ["/datasheets/p100-pro-revospray-1.jpg", "/datasheets/p100-pro-revospray-2.jpg"];
+                        files.forEach((file, index) => {
+                          setTimeout(() => {
+                            const link = document.createElement("a");
+                            link.href = file;
+                            link.download = `P100_PRO_RevoSpray_Pagina${index + 1}.jpg`;
+                            link.click();
+                          }, index * 300);
+                        });
+                      }}
                       className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
                     >
                       <Download size={18} />
-                      Ficha Técnica RevoSpray (Pág. 1)
-                    </a>
-                    <a 
-                      href="/datasheets/p100-pro-revospray-2.jpg" 
-                      download="P100_PRO_RevoSpray_Pagina2.jpg"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
-                    >
-                      <Download size={18} />
-                      Ficha Técnica RevoSpray (Pág. 2)
-                    </a>
+                      Ficha Técnica RevoSpray
+                    </button>
                   </div>
                 </div>
               </AccordionContent>
@@ -270,22 +271,23 @@ const DroneModels = () => {
                   </div>
 
                   <div className="flex flex-wrap gap-3 mt-4">
-                    <a 
-                      href="/datasheets/p150-revospray-1.png" 
-                      download="P150_RevoSpray_Pagina1.png"
+                    <button 
+                      onClick={() => {
+                        const files = ["/datasheets/p150-revospray-1.png", "/datasheets/p150-revospray-2.png"];
+                        files.forEach((file, index) => {
+                          setTimeout(() => {
+                            const link = document.createElement("a");
+                            link.href = file;
+                            link.download = `P150_RevoSpray_Pagina${index + 1}.png`;
+                            link.click();
+                          }, index * 300);
+                        });
+                      }}
                       className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
                     >
                       <Download size={18} />
-                      Ficha Técnica RevoSpray (Pág. 1)
-                    </a>
-                    <a 
-                      href="/datasheets/p150-revospray-2.png" 
-                      download="P150_RevoSpray_Pagina2.png"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
-                    >
-                      <Download size={18} />
-                      Ficha Técnica RevoSpray (Pág. 2)
-                    </a>
+                      Ficha Técnica RevoSpray
+                    </button>
                   </div>
                 </div>
               </AccordionContent>
@@ -320,38 +322,40 @@ const DroneModels = () => {
                   </div>
 
                   <div className="flex flex-wrap gap-3 mt-4">
-                    <a 
-                      href="/datasheets/p60-revocast-1.png" 
-                      download="P60_RevoCast_Pagina1.png"
+                    <button 
+                      onClick={() => {
+                        const files = ["/datasheets/p60-revocast-1.png", "/datasheets/p60-revocast-2.png"];
+                        files.forEach((file, index) => {
+                          setTimeout(() => {
+                            const link = document.createElement("a");
+                            link.href = file;
+                            link.download = `P60_RevoCast_Pagina${index + 1}.png`;
+                            link.click();
+                          }, index * 300);
+                        });
+                      }}
                       className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
                     >
                       <Download size={18} />
-                      Ficha Técnica RevoCast (Pág. 1)
-                    </a>
-                    <a 
-                      href="/datasheets/p60-revocast-2.png" 
-                      download="P60_RevoCast_Pagina2.png"
+                      Ficha Técnica RevoCast
+                    </button>
+                    <button 
+                      onClick={() => {
+                        const files = ["/datasheets/p60-revospray-1.png", "/datasheets/p60-revospray-2.png"];
+                        files.forEach((file, index) => {
+                          setTimeout(() => {
+                            const link = document.createElement("a");
+                            link.href = file;
+                            link.download = `P60_RevoSpray_Pagina${index + 1}.png`;
+                            link.click();
+                          }, index * 300);
+                        });
+                      }}
                       className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
                     >
                       <Download size={18} />
-                      Ficha Técnica RevoCast (Pág. 2)
-                    </a>
-                    <a 
-                      href="/datasheets/p60-revospray-1.png" 
-                      download="P60_RevoSpray_Pagina1.png"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
-                    >
-                      <Download size={18} />
-                      Ficha Técnica RevoSpray (Pág. 1)
-                    </a>
-                    <a 
-                      href="/datasheets/p60-revospray-2.png" 
-                      download="P60_RevoSpray_Pagina2.png"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
-                    >
-                      <Download size={18} />
-                      Ficha Técnica RevoSpray (Pág. 2)
-                    </a>
+                      Ficha Técnica RevoSpray
+                    </button>
                   </div>
                 </div>
               </AccordionContent>
