@@ -29,7 +29,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-white animate-fade-in drop-shadow-lg">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 mt-8 sm:mt-12 lg:mt-16 text-white animate-fade-in drop-shadow-lg">
             Raptor Drones Agrícolas
           </h1>
           <h2 className="text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-6 text-white/95 font-light animate-fade-in drop-shadow-md">
