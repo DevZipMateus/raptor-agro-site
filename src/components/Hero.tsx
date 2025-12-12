@@ -25,7 +25,7 @@ const Hero = () => {
       </video>
       
       {/* Text Content Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center pt-20 sm:pt-24 lg:pt-16 pb-12">
+      <div className="absolute inset-0 flex items-center justify-center pt-20 sm:pt-24 lg:pt-32 pb-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center [text-shadow:_1px_1px_2px_rgb(0_0_0_/_80%),_-1px_-1px_2px_rgb(0_0_0_/_80%),_1px_-1px_2px_rgb(0_0_0_/_80%),_-1px_1px_2px_rgb(0_0_0_/_80%)]">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-white animate-fade-in">
