@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative h-screen">
+    <section id="hero" className="relative min-h-screen h-auto py-20">
       <video
         autoPlay
         loop
