@@ -38,6 +38,12 @@ import p150_7 from "@/assets/p150-7.jpg";
 import p150_8 from "@/assets/p150-8.jpg";
 import p150_9 from "@/assets/p150-9.jpg";
 import p150_10 from "@/assets/p150-10.jpg";
+import p60_1 from "@/assets/p60-1.jpg";
+import p60_2 from "@/assets/p60-2.jpg";
+import p60_3 from "@/assets/p60-3.jpg";
+import p60_4 from "@/assets/p60-4.jpg";
+import p60_5 from "@/assets/p60-5.jpg";
+import p60_6 from "@/assets/p60-6.jpg";
 
 const DroneModels = () => {
   const p100ProImages = [
@@ -84,6 +90,15 @@ const DroneModels = () => {
     { src: p150_8, alt: "P150 - Drone em operação" },
     { src: p150_9, alt: "P150 - Pulverização agrícola" },
     { src: p150_10, alt: "P150 - Drone agrícola avançado" },
+  ];
+
+  const p60Images = [
+    { src: p60_1, alt: "P60 - Sistema RevoSpray em detalhe" },
+    { src: p60_2, alt: "P60 - Visão geral do drone" },
+    { src: p60_3, alt: "P60 - RevoCast em operação" },
+    { src: p60_4, alt: "P60 - Pulverização de precisão" },
+    { src: p60_5, alt: "P60 - Sistema de dispersão" },
+    { src: p60_6, alt: "P60 - Aplicação agrícola" },
   ];
 
   return (
@@ -221,6 +236,37 @@ const DroneModels = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {p150Images.map((image, index) => (
+                      <div
+                        key={index}
+                        className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group"
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="p60" className="bg-background rounded-lg mb-4 border-border">
+              <AccordionTrigger className="px-6 text-xl font-semibold text-foreground hover:text-primary hover:no-underline">
+                P60
+              </AccordionTrigger>
+              <AccordionContent className="px-6">
+                <div className="space-y-6">
+                  <div className="prose max-w-none">
+                    <p className="text-muted-foreground">
+                      O P60 é um drone agrícola compacto e versátil, equipado com sistemas RevoSpray e RevoCast 
+                      para aplicações de precisão em áreas menores e de difícil acesso.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {p60Images.map((image, index) => (
                       <div
                         key={index}
                         className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group"
