@@ -24,14 +24,11 @@ const Footer = () => {
               Soluções tecnológicas completas para a agricultura de precisão. Voando alto junto com o agro!
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61584461529092" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://instagram.com/raptor_dronesbrasil" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Linkedin size={20} />
               </a>
             </div>
           </div>
@@ -69,15 +66,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-muted-foreground">
                 <Phone size={18} className="mt-1 flex-shrink-0" />
-                <span>(00) 00000-0000</span>
+                <a href="https://wa.me/55999361592" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(55) 99936-1592</a>
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
                 <Mail size={18} className="mt-1 flex-shrink-0" />
-                <span>contato@raptordrones.com</span>
+                <a href="mailto:raptordronesagricolas@gmail.com" className="hover:text-primary transition-colors">raptordronesagricolas@gmail.com</a>
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin size={18} className="mt-1 flex-shrink-0" />
-                <span>Endereço da empresa</span>
+                <span>Rua Engenheiro Rogerio Tochetto, 33, Nossa Senhora de Lourdes, Santa Maria/RS</span>
               </li>
             </ul>
           </div>
