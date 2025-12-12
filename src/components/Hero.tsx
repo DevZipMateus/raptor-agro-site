@@ -25,22 +25,22 @@ const Hero = () => {
       </video>
       
       {/* Text Content Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex items-end justify-center pb-16 sm:pb-20 lg:pb-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-white animate-fade-in drop-shadow-lg">
+          <div className="max-w-4xl mx-auto text-center [text-shadow:_1px_1px_2px_rgb(0_0_0_/_80%),_-1px_-1px_2px_rgb(0_0_0_/_80%),_1px_-1px_2px_rgb(0_0_0_/_80%),_-1px_1px_2px_rgb(0_0_0_/_80%)]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-white animate-fade-in">
               Raptor Drones Agrícolas
             </h1>
-            <h2 className="text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-6 text-white/90 font-light animate-fade-in drop-shadow-md">
+            <h2 className="text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-6 text-white/90 font-light animate-fade-in">
               Soluções tecnológicas completas para a agricultura de precisão
             </h2>
-            <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 text-white/90 max-w-2xl mx-auto animate-fade-in leading-relaxed drop-shadow-md">
+            <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 text-white/90 max-w-2xl mx-auto animate-fade-in leading-relaxed">
               Somos uma loja especializada em tecnologia agrícola, representante oficial da marca XAG em Santa Maria/RS
             </p>
-            <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 text-white/80 max-w-2xl mx-auto animate-fade-in leading-relaxed drop-shadow-md">
+            <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 text-white/80 max-w-2xl mx-auto animate-fade-in leading-relaxed">
               Oferecemos soluções completas para o campo com drones agrícolas de última geração, peças originais, assistência técnica especializada, além de cursos e treinamentos para capacitar produtores no uso da tecnologia. Também disponibilizamos misturadores de calda, geradores de energia e outros equipamentos que facilitam o dia a dia no agronegócio.
             </p>
-            <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 text-white max-w-2xl mx-auto animate-fade-in leading-relaxed font-medium drop-shadow-lg">
+            <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 text-white max-w-2xl mx-auto animate-fade-in leading-relaxed font-medium">
               Venham nos conhecer e fazer bons negócios!
             </p>
             
