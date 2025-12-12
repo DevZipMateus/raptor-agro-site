@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Download } from "lucide-react";
 import p100Pro1 from "@/assets/p100-pro-1.jpg";
 import p100Pro2 from "@/assets/p100-pro-2.jpg";
 import p100Pro3 from "@/assets/p100-pro-3.jpg";
@@ -217,6 +218,25 @@ const DroneModels = () => {
                       </div>
                     ))}
                   </div>
+
+                  <div className="flex flex-wrap gap-3 mt-4">
+                    <a 
+                      href="/datasheets/p100-pro-revospray-1.jpg" 
+                      download="P100_PRO_RevoSpray_Pagina1.jpg"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
+                    >
+                      <Download size={18} />
+                      Ficha Técnica RevoSpray (Pág. 1)
+                    </a>
+                    <a 
+                      href="/datasheets/p100-pro-revospray-2.jpg" 
+                      download="P100_PRO_RevoSpray_Pagina2.jpg"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
+                    >
+                      <Download size={18} />
+                      Ficha Técnica RevoSpray (Pág. 2)
+                    </a>
+                  </div>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -248,6 +268,25 @@ const DroneModels = () => {
                       </div>
                     ))}
                   </div>
+
+                  <div className="flex flex-wrap gap-3 mt-4">
+                    <a 
+                      href="/datasheets/p150-revospray-1.png" 
+                      download="P150_RevoSpray_Pagina1.png"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
+                    >
+                      <Download size={18} />
+                      Ficha Técnica RevoSpray (Pág. 1)
+                    </a>
+                    <a 
+                      href="/datasheets/p150-revospray-2.png" 
+                      download="P150_RevoSpray_Pagina2.png"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
+                    >
+                      <Download size={18} />
+                      Ficha Técnica RevoSpray (Pág. 2)
+                    </a>
+                  </div>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -278,6 +317,41 @@ const DroneModels = () => {
                         />
                       </div>
                     ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-3 mt-4">
+                    <a 
+                      href="/datasheets/p60-revocast-1.png" 
+                      download="P60_RevoCast_Pagina1.png"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
+                    >
+                      <Download size={18} />
+                      Ficha Técnica RevoCast (Pág. 1)
+                    </a>
+                    <a 
+                      href="/datasheets/p60-revocast-2.png" 
+                      download="P60_RevoCast_Pagina2.png"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
+                    >
+                      <Download size={18} />
+                      Ficha Técnica RevoCast (Pág. 2)
+                    </a>
+                    <a 
+                      href="/datasheets/p60-revospray-1.png" 
+                      download="P60_RevoSpray_Pagina1.png"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
+                    >
+                      <Download size={18} />
+                      Ficha Técnica RevoSpray (Pág. 1)
+                    </a>
+                    <a 
+                      href="/datasheets/p60-revospray-2.png" 
+                      download="P60_RevoSpray_Pagina2.png"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
+                    >
+                      <Download size={18} />
+                      Ficha Técnica RevoSpray (Pág. 2)
+                    </a>
                   </div>
                 </div>
               </AccordionContent>
